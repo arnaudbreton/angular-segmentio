@@ -1,4 +1,18 @@
-angular-segmentio
-=================
+# Tracking Events and Pageviews with Segment.io
 
-An AngularJS (http://angularjs.org) module for analytics service Segment.io (http://segment.io)
+## How?
+
+follow these step:
+
+- Add the service to your angular js app module:
+
+	``var app = angular.module('myapp', ['segmentio']) {
+		...
+	});``
+
+
+- Now just have analytics to be injected in your contorller.
+
+	``function myCtrl($rootScope, $scope, $http, analytics) {
+	    ...
+	};``
