@@ -11,8 +11,10 @@ follow these step:
 	});``
 
 
-- Now just have analytics to be injected in your contorller.
+- Now just have analytics to be injected in your controller.
 
-	``function myCtrl($rootScope, $scope, $http, analytics) {
+	``function myCtrl($rootScope, $scope, $http, segmentio) {
 	    ...
 	};``
+
+- Call any method documented here: https://segment.io/libraries/analytics.js
