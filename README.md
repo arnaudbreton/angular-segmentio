@@ -6,16 +6,20 @@ Follow these steps:
 
 1) Add the service to your angular js app module:
 
-	``var app = angular.module('myapp', ['segmentio']) {
-		...
-	});``
+```
+var app = angular.module('myapp', ['segmentio']) {
+    ...
+});
+```
 
 
 2) Now just have analytics to be injected in your controller.
 
-	``function myCtrl($rootScope, $scope, $http, segmentio) {
-	    ...
-	};``
+```
+function myCtrl($rootScope, $scope, $http, segmentio) {
+    ...
+};
+```
 
 3) Call any method documented here: https://segment.io/libraries/analytics.js
 
