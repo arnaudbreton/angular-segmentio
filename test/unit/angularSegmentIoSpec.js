@@ -40,6 +40,10 @@ describe('Segment IO', function () {
 		expect(segmentio.trackSubmit).toBeDefined();
 	}));
 
+	it('should have a page method after loading', inject(function (segmentio) {
+		expect(segmentio.page).toBeDefined();
+	}));
+
 	it('should have a pageview method after loading', inject(function (segmentio) {
 		expect(segmentio.pageview).toBeDefined();
 	}));
