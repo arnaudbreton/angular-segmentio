@@ -11,12 +11,12 @@ angular.module('segmentio', ['ng'])
             var methodFactory = function(type) {
                 return function() {
                     var args = Array.prototype.slice.call(arguments, 0);
-                    $log.info('Call segmentio API with', type, args);
+                    $log.debug('Call segmentio API with', type, args);
                     if ($window.analytics.initialized) {
-                        $log.info('Segmentio API initialized, calling API');
+                        $log.debug('Segmentio API initialized, calling API');
                         $window.analytics[type].apply($window.analytics, args);
                     } else {
-                        $log.info('Segmentio API not yet initialized, queueing call');
+                        $log.debug('Segmentio API not yet initialized, queueing call');
                         $window.analytics.push([type].concat(args));
                     }
                 };
